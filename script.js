@@ -2,6 +2,7 @@
 const signup = document.querySelector(".signup");
 const signupModal = document.querySelector(".signup-modal-wrapper");
 const closeButton = document.querySelector(".close-modal");
+const checkBox = document.getElementById("side");
 
 // function which shows the modal by changing the style of signupModal to "block"
 const showModal = () => {
@@ -27,5 +28,13 @@ closeButton.addEventListener("click", () => {
 window.addEventListener("click", () => {
   if (event.target === modal) {
     closeModal();
+  }
+});
+
+// Hide menu when clicking on another part of the page
+document.addEventListener("click", (evt) => {
+  let currTarget = evt.target;
+  if(currTarget !== checkBox && checkBox.checked) {
+    checkBox.checked = false;
   }
 });

@@ -16,6 +16,9 @@
 
 /* For Smartphones */
 @media all and (max-width: 670px) {
+  header {
+    background-color: rgba(34, 49, 52, 1);
+  }
   .header-right {
     display: none;
   }
@@ -52,5 +55,22 @@
   
   footer {
     text-align: center;
+  }
+
+  #side:checked ~ .header-right {
+    display: block;
+    position: absolute;
+    top: 64px;
+    height: 100vh;
+    background-color: rgba(34, 49, 52, 1);
+    width: 100%;
+    left: 0;
+    flex-direction: column;
+    text-align: center;
+    display: flex;
+  }
+
+  label {
+    cursor: pointer;
   }
 }

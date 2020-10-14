@@ -21,6 +21,7 @@ div {
 
 body {
   font-family: "Lucida Grande";
+  transition: all .5s ease-in-out;
 }
 
 a {
@@ -117,6 +118,7 @@ header {
 .header-right {
   float: right;
   margin-right: -25px;
+  transition: all .5s ease-in-out;
 }
 
 .header-right a {
@@ -223,6 +225,12 @@ header {
 .lesson {
   float: left;
   width: 25%;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+}
+
+.lesson:hover {
+  transform: scale(1.2);
 }
 
 .lesson-icon {
@@ -230,10 +238,21 @@ header {
 }
 
 .lesson-icon p {
+  transition: all .5s ease-in-out;
   position: absolute;
   top: 44%;
   width: 100%;
   color: white;
+}
+
+.lesson:hover .lesson-icon p {
+  font-size: 1.4em;
+  color: rgba(34, 49, 52, 0.9);
+  font-weight: bold;
+}
+
+#side {
+  display: none;
 }
 
 .text-contents {
@@ -285,6 +304,6 @@ footer {
   color: white;
   float: right;
   font-size: 25px;
-  padding: 21px 0;
+  padding: 15px 0;
   display: none;
 }
